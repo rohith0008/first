@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+</head>
+<body>
+    <h1>Job Application Form</h1>
+    <form action="" method="">
+        <h2>Personal Information</h2>
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="text" name="text" placeholder="Enter Username"><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" placeholder="example@gmail.com"><br>
+
+        <label for="phone">Phone Number:</label><br>
+        <input type="phone" id="phone" name="phone" maxlength="10"><br>
+
+		<label for="Gender">Gender:</label><br>
+		<input type="radio" id="male" name="gender" value="male">
+		<label for="male">Male</label><br>
+
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br>
+
+		<input type="radio" id="other" name="gender" value="other" >
+		<label for="other">Other</label><br>
+
+        <label for="address">Address:</label><br>
+        <textarea id="address" name="address" placeholder="Enter Valid Address"></textarea><br>
+
+        <h2>Position Information</h2>
+
+		<label for="position">Position Applying For:</label><br>
+    	<select name="position" id="position">
+		<option value=""></option>
+        <option value="Software Developer Role">Software Developer Role</option>
+        <option value="Frontend Developer">Frontend Developer</option>
+        <option value="Java Developer">Java Developer</option>
+        <option value="Other">Other</option>
+    	</select><br><br>
+
+        <label for="salary">Expected Salary:</label><br>
+        <input type="number" id="salary" name="salary" step="50000"><br><br>
+
+        <label for="startDate">Availability (Start Date):</label><br>
+        <input type="date" id="startDate" name="startDate"><br>
+
+        <h2>Education</h2>
+        <label for="degree">Highest Degree:</label><br>
+    	<select name="degree" id="degree">
+		<option value=""></option>
+		<option value="HS">High School</option>
+		<option value="UG">Under Graduate</option>
+		<option value="PG">Post Graduate</option>
+		</select><br>
+
+
+        <label for="institution">Institution Name:</label><br>
+        <input type="text" id="institution" name="institution"><br>
+
+        <label for="gradYear">Graduation Year:</label><br>
+        <input type="number" id="gradYear" name="gradYear" min="2000" max="2025"><br>
+
+        <h2>Work Experience</h2>
+        <label for="employee">Previously Employeed in:</label><br>
+        <input type="text" id="employee" name="employee"><br>
+
+        <label for="jobTitle">Role:</label><br>
+        <input type="text" id="role" name="role"><br>
+
+        <label for="duration">Bond Duration:</label><br>
+        <input type="text" id="duration" name="duration"><br>
+
+        <label for="Resume">Upload a File:</label><br>
+        <input type="file" id="file" name="file"><br>
+
+        <h2>Skills</h2>
+        <label for="skills">Add Your Skills:</label><br>
+        <textarea id="skills" name="skills" placeholder="Technical Skills"></textarea><br>
+
+        <h2>References</h2>
+        <label for="references">Other References:</label><br>
+        <textarea id="references" name="references" placeholder="any"></textarea><br>
+
+		<input type="button" value="Submit"> <br>
+    </form>
+</body>
+</html>
