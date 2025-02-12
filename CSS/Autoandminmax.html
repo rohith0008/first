@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: green; /* autofill with a color */
+            padding: 20px;
+            width: 300px;
+            height: 200px;
+        }
+        .container2 {
+            width: auto; /* autofit width */
+            height: 100px;
+            padding: 20px;
+            background-color: lightcoral;
+        }
+        
+       .as{
+        display: grid;
+        grid-template-columns: repeat(2,2fr);
+        grid-template-rows: repeat(2,2fr);
+        gap: 5px;
+        
+       }
+       .as1{
+        background-color: brown;
+        padding: 30px;
+        text-align:center;
+        
+       }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>dwksmd dkqndkq qd Autofill is a CSS property that allows you to automatically fill a container with a specific color or image. However, 
+            the term "autofill" is more commonly associated with HTML forms, where it refers to the automatic completion of form fields.
+        </p>
+    </div>
+    <br>
+    <div class="container2">
+        <p>Autofit, on the other hand, refers to the ability of an element to automatically adjust its size to fit its content
+            - width: auto; or height: auto; to automatically adjust the width or height of an element based on its content.
+            -max-width or max-height to set a maximum width or height for an element, while allowing it to automatically adjust its size below that maximum.
+        </p>
+    </div>
+    <br>
+    <main class="as">
+        <p class="as1">rohith</p>
+        <p class="as1">rahul</p>
+        <p class="as1">sai</p>
+        <p class="as1">naresh</p>
+    </main>
+</body>
+</html>
