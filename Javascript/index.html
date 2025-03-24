@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sayHi(name){
+            console.log(`${name} hello`);
+        }
+        setTimeout(sayHi,2000,"jdjd ")
+        setInterval(sayHi,2000,"rohith")
+        
+
+        let car={
+            brand: "sks",
+            model:2024,
+            year:12
+        }
+        console.log(car.brand);
+
+        let course={first:"PFS",second:"JFS"};
+
+        function func(a,b){
+            console.log(
+                a+" "+this.first+" "+this.second+" "+b
+            );
+        }
+        func.call(course,"I need a couse","in codegnan");
+        func.apply(course,["I need a Course","in codegnan"]);
+        
+        var s=func.bind(course);
+        s("I need a Course","in Codegnan");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

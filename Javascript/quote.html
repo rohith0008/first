@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QUOTES</title>
+    <style>
+      body{
+        background-image: url("https://www.elegantthemes.com/blog/wp-content/uploads/2013/09/bg-1-full.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        cursor: pointer;
+      }
+      #parent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        font-size: x-large;
+      }
+      #quote {
+        font-weight: 600;
+      }
+      #button {
+        background-color: rgb(220, 20, 87);
+        border: 1px solid white;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 20px;
+        color: white;
+        padding: 10px 38px;
+      }
+      #button:hover {
+        background-color: rgb(255, 0, 106);
+        padding: 11px 40px;
+      }
+
+      #button:active {
+        background-color: rgb(247, 2, 2);
+        padding: 12px 42px;
+      }
+    </style>
+  </head>
+
+
+
+
+  <body>
+    <div id="parent">
+      <p id="text" onclick="next()"></p>
+      <h4 id="name"></h4>
+      <button id="button" onclick="next()">New Quote</button>
+    </div>
+
+
+    
+    <script>
+      var p = document.getElementById("text");
+      var h4 = document.getElementById("name");
+      var index = 0;
+      var data = [];
+      function next() {
+        index = Math.floor(Math.random() * data.length);
+        console.log(index);
+        fetdata();
+      }
+
+      async function fetdata() {
+        let url = "https://jacintodesign.github.io/quotes-api/data/quotes.json";
+        try {
+          let quo = await fetch(url);
+          let quo2 = await quo.json();
+
+          data = quo2;
+          console.log(quo2);
+          p.textContent = quo2[index].text;
+          h4.textContent = `${quo2[index].author}`
+          console.log(quo2[index]);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      fetdata();
+    </script>
+  </body>
+</html>

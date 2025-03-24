@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=new Promise((resolve,reject)=>{
+            setTimeout(resolve("JFS"),1000);
+        })
+
+        let b=new Promise((resolve,reject)=>{
+            setTimeout(reject("PFS"),1000);
+        })
+        let c=new Promise((resolve,reject)=>{
+            setTimeout(resolve("Datascience"),1000);
+        })
+
+        //Promise.all([a,b,c])
+
+        //Promise.allSettled([a,b,c])
+        //Promise.any([a,b,c])
+        Promise.race([a,b,c])
+        .then((value)=>console.log(value)).catch((error)=>console.log(error));
+        
+    </script>
+</body>
+</html>
